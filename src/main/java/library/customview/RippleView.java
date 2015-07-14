@@ -126,8 +126,6 @@ public class RippleView extends RelativeLayout {
         super.draw(canvas);
 
         if (animationRunning) {
-            onCompletionListener.onClick(this);
-
             if (rippleDuration <= timer * frameRate) {
                 animationRunning = false;
                 timer = 0;
@@ -448,7 +446,6 @@ public class RippleView extends RelativeLayout {
      * Defines a callback called at the end of the Ripple effect
      */
     public interface OnRippleCompleteListener {
-        void onClick(RippleView rippleView);
         void onComplete(RippleView rippleView);
     }
 
