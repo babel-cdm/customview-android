@@ -1,4 +1,4 @@
-package library.customview;
+package library.customview.material;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -18,6 +18,8 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.RelativeLayout;
+
+import library.customview.R;
 
 public class RippleView extends RelativeLayout {
 
