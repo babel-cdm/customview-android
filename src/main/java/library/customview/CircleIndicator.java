@@ -120,6 +120,13 @@ public class CircleIndicator extends LinearLayout implements OnPageChangeListene
         mAnimationIn.setTarget(currentIndicator);
         mAnimationIn.start();
 
+        for (int i = 0 ; i < mViewpager.getAdapter().getCount(); i++) {
+            View aux = getChildAt(i);
+            aux.setBackgroundResource(mIndicatorUnselectedBackground);
+            mAnimationOut.setTarget(aux);
+            mAnimationOut.start();
+        }
+
         View selectedIndicator = getChildAt(position);
         selectedIndicator.setBackgroundResource(mIndicatorBackground);
         mAnimationOut.setTarget(selectedIndicator);
