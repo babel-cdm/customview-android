@@ -2,6 +2,23 @@
 
 <resources>
 
+    <declare-styleable name="FloatLabel">
+        <attr name="android:hint"/>
+        <attr name="android:imeOptions"/>
+        <attr name="android:inputType"/>
+        <attr name="android:layout"/>
+        <attr name="android:nextFocusDown"/>
+        <attr name="android:nextFocusForward"/>
+        <attr name="android:nextFocusLeft"/>
+        <attr name="android:nextFocusRight"/>
+        <attr name="android:nextFocusUp"/>
+        <attr name="android:text"/>
+        <attr name="android:textColorHint"/>
+        <attr name="floatLabelColor" format="color"/>
+        <attr name="labelId" format="reference"/>
+        <attr name="editTextId" format="reference"/>
+    </declare-styleable>
+
     <declare-styleable name="RippleView">
         <attr name="rv_alpha" format="integer" />
         <attr name="rv_framerate" format="integer" />
@@ -17,7 +34,6 @@
         <attr name="rv_ripplePadding" format="dimension" />
         <attr name="rv_zoom" format="boolean" />
         <attr name="rv_zoomScale" format="float" />
-
     </declare-styleable>
 
     <declare-styleable name="CircleIndicator">
@@ -28,6 +44,39 @@
         <attr name="ci_animator_reverse" format="reference"/>
         <attr name="ci_drawable" format="reference"/>
         <attr name="ci_drawable_unselected" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomAttributes">
+
+        <!-- Color of ripple animation -->
+        <attr name="rippleColor" format="color|reference" />
+        <!-- Speed of ripple animation -->
+        <attr name="rippleSpeed" format="float" />
+        <!-- indicate if the slider must show number indicator -->
+        <attr name="showNumberIndicator" format="boolean" />
+        <!-- in progress view indicate max value of progress -->
+        <attr name="max" format="integer" />
+        <!-- in progress view indicate min value of progress -->
+        <attr name="min" format="integer" />
+        <!-- in progress view indicate value of progress -->
+        <attr name="value" format="integer" />
+        <!-- in progress view indicate value of progress -->
+        <attr name="progress" format="integer" />
+        <attr name="ringWidth" format="dimension" />
+        <!-- in switche's view indicate state of view -->
+        <attr name="check" format="boolean" />
+        <attr name="checkBoxSize" format="dimension" />
+        <attr name="thumbSize" format="dimension" />
+        <!-- in float button indicate icon resource -->
+        <attr name="iconDrawable" format="integer" />
+        <!-- in button whitch contains drawable indicate icon resource -->
+        <attr name="iconSize" format="dimension" />
+        <!-- in float button indicate if must start with animation -->
+        <attr name="animate" format="boolean" />
+        <!-- set the border of the ripple frame -->
+        <attr name="rippleBorderRadius" format="float" />
+        <!-- if true, delays calls to OnClickListeners until ripple effect ends -->
+        <attr name="clickAfterRipple" format="boolean" />
     </declare-styleable>
 
 </resources>
