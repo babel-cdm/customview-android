@@ -2,8 +2,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="80dp"
+    android:id="@+id/sliderLayout"
     android:layout_width="match_parent"
-    android:background="#FFD301"
+    android:background="@android:color/holo_blue_light"
     android:padding="10dp">
 
     <ImageView
@@ -19,8 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_alignParentRight="true"
         android:visibility="invisible"
-        android:src="@drawable/unlock_right"
-        android:contentDescription="Unlocked" />
+        android:src="@drawable/unlock_right"/>
 
     <TextView
         android:id="@+id/text_label"
@@ -29,7 +29,7 @@
         android:layout_centerInParent="true"
         android:paddingLeft="30dp"
         android:gravity="center"
-        android:text="Desliza para pagar"
+        android:text="Slide"
         android:textColor="@android:color/white"
         android:textSize="25sp"/>
 
@@ -38,7 +38,6 @@
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_marginLeft="10dp"
-        android:src="@drawable/slider"
-        android:contentDescription="Move this thumb" />
+        android:src="@drawable/slider" />
 
 </RelativeLayout>
