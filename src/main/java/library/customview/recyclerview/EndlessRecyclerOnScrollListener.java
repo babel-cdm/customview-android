@@ -38,13 +38,13 @@ public abstract class EndlessRecyclerOnScrollListener extends RecyclerView.OnScr
             // End has been reached
 
             // Do something
-            current_page++;
+//            current_page++;
 
-            onLoadMore(current_page);
+            onLoadMore();
 
             loading = true;
         }
     }
 
-    public abstract void onLoadMore(int current_page);
+    public abstract void onLoadMore();
 }
