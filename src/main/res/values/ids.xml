@@ -2,4 +2,5 @@
 <resources>
     <item type="id" name="float_label" />
     <item type="id" name="edit_text" />
+    <item name="jazzy_key" type="id"/>
 </resources>
