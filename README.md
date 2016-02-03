@@ -7,7 +7,7 @@ Customview es una librería del CDM en la que se van incluyendo elementos visual
   - Material views
   - TouchImageView
   - etc.
-  - 
+  
 ### Instalación
 
 Simplemente hacer un clone en el directorio que corresponda y añadir la dependencia al proyecto Android:
