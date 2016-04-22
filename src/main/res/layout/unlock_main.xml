@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="80dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sliderLayout"
     android:layout_width="match_parent"
+    android:layout_height="80dp"
     android:background="@android:color/holo_blue_light"
     android:padding="10dp">
 
     <ImageView
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+        android:contentDescription="Locked"
         android:src="@drawable/unlock_left"
-        android:visibility="invisible"
-        android:contentDescription="Locked" />
+        android:visibility="invisible" />
 
     <ImageView
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:visibility="invisible"
-        android:src="@drawable/unlock_right"/>
+        android:src="@drawable/unlock_right"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/text_label"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:paddingLeft="30dp"
         android:gravity="center"
+        android:paddingLeft="30dp"
         android:text="Slide"
         android:textColor="@android:color/white"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <ImageView
         android:id="@+id/img_thumb"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
         android:src="@drawable/slider" />
 
 </RelativeLayout>
