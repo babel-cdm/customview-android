@@ -1,6 +1,5 @@
 package library.customview.material.views;
 
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,7 +21,6 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import library.customview.R;
 
@@ -32,24 +30,24 @@ import library.customview.R;
 public class MaterialDialog {
 
     private final static int BUTTON_BOTTOM = 9;
-    private final static int BUTTON_TOP    = 9;
+    private final static int BUTTON_TOP = 9;
 
-    private boolean                   mCancel;
-    private Context                   mContext;
-    private AlertDialog               mAlertDialog;
-    private Builder    mBuilder;
-    private View                      mView;
-    private int                       mTitleResId;
-    private CharSequence              mTitle;
-    private int                       mMessageResId;
-    private CharSequence              mMessage;
-    private Button                    mPositiveButton;
+    private boolean mCancel;
+    private Context mContext;
+    private AlertDialog mAlertDialog;
+    private Builder mBuilder;
+    private View mView;
+    private int mTitleResId;
+    private CharSequence mTitle;
+    private int mMessageResId;
+    private CharSequence mMessage;
+    private Button mPositiveButton;
     private LinearLayout.LayoutParams mLayoutParams;
-    private Button                    mNegativeButton;
+    private Button mNegativeButton;
     private boolean mHasShow = false;
-    private Drawable                          mBackgroundDrawable;
-    private int                               mBackgroundResId;
-    private View                              mMessageContentView;
+    private Drawable mBackgroundDrawable;
+    private int mBackgroundResId;
+    private View mMessageContentView;
     private DialogInterface.OnDismissListener mOnDismissListener;
 
     public MaterialDialog(Context context) {
@@ -62,6 +60,10 @@ public class MaterialDialog {
         else
             mAlertDialog.show();
         mHasShow = true;
+    }
+
+    public void requestWindowFeature(int feature) {
+        mAlertDialog.requestWindowFeature(feature);
     }
 
     public MaterialDialog setView(View view) {
@@ -249,16 +251,16 @@ public class MaterialDialog {
 
     private class Builder {
 
-        private TextView     mTitleView;
-        private TextView     mMessageView;
-        private Window       mAlertDialogWindow;
+        private TextView mTitleView;
+        private TextView mMessageView;
+        private Window mAlertDialogWindow;
         private LinearLayout mButtonLayout;
 
         private Builder() {
             mAlertDialog = new AlertDialog.Builder(mContext).create();
             mAlertDialog.show();
 
-            mAlertDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+            mAlertDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
             mAlertDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
             mAlertDialogWindow = mAlertDialog.getWindow();
