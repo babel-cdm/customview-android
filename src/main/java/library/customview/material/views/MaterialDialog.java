@@ -39,6 +39,7 @@ public class MaterialDialog {
     private View mView;
     private int mTitleResId;
     private CharSequence mTitle;
+    private boolean titleHidden = false;
     private int mMessageResId;
     private CharSequence mMessage;
     private Button mPositiveButton;
@@ -62,8 +63,9 @@ public class MaterialDialog {
         mHasShow = true;
     }
 
-    public void requestWindowFeature(int feature) {
-        mAlertDialog.requestWindowFeature(feature);
+    public MaterialDialog hideTitle() {
+        titleHidden = true;
+        return this;
     }
 
     public MaterialDialog setView(View view) {
@@ -296,7 +298,7 @@ public class MaterialDialog {
             if (mTitle != null) {
                 setTitle(mTitle);
             }
-            if (mTitle == null && mTitleResId == 0) {
+            if ((mTitle == null && mTitleResId == 0) || titleHidden) {
                 mTitleView.setVisibility(View.GONE);
             }
             if (mMessageResId != 0) {
