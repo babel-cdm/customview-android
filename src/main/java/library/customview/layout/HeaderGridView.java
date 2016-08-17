@@ -15,9 +15,7 @@ import android.widget.ListAdapter;
 import android.widget.WrapperListAdapter;
 import java.util.ArrayList;
 
-/**
- * Created by BABEL Sistemas de Información.
- */
+
 public class HeaderGridView extends GridView {
     private static final String TAG = "HeaderGridView";
     /**
